@@ -1,11 +1,14 @@
-
-import './App.css';
+import { NavBar } from "./components/NavBar";
+import { MainPage } from "./components/MainPage"
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../src/App.css";
 
 function App() {
   return (
-    <section>
-
-    </section>
+    <div className="App">
+      <NavBar />
+      <MainPage />
+    </div>
   );
 }
 

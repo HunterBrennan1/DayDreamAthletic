@@ -1,1 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600&display=swap');
 
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top:75px ;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+body {
+  font-family:'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color:#fefefe;
+}
+
+.top-banner{
+  display: flex;
+  flex-direction: row;
+  background-color:#121212;
+  color:#fff;
+  text-decoration: none;
+  justify-content: center;
+  height:50px;
+  width:100%;
+  align-items: center;
+  vertical-align: middle;
+  margin-right: auto;
+  margin-left: auto;
+  gap:20px;
+}
+
+.discount-title {
+  font-size: 25px;
+}
+
+.NavBar {
+  display:flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.logo {
+  /* background-color:#121212 ; */
+  /* color:#fefefe; */
+  padding:10px;
+  border-radius: 7px;
+  font-weight: 400;
+}
+
+.nav-login-out {
+  display:flex;
+  flex-direction: row;
+  padding:15px;
+  gap:10px;
+}
+
+.nav-btn-icons {
+  background-color:transparent;
+
+}
+
+.search-btn {
+  color:#fefefe !important;
+  border-color: #121212;
+  background-color: #121212;
+  font-weight: 600;
+  border-radius: 7px;
+}
+
+.banner-container {
+  height:auto;
+  width:80%;
+
+}
+
+.banner-img {
+  height:700px;
+  width:100%;
+}
+
+.carousel-container {
+  height:800px;
+}
