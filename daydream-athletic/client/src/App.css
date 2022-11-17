@@ -30,6 +30,13 @@ a {
   cursor: pointer;
 }
 
+header {
+  position: fixed;
+  width:100%;
+  z-index: 9999;
+
+}
+
 .top-banner{
   display: flex;
   flex-direction: row;
@@ -72,10 +79,11 @@ a {
   flex-direction: row;
   vertical-align: center;
   gap:30px;
-  margin-right:310px;
+  /* margin-right:110px; */
   font-size: 15px;
   height:30px;
-  padding-top: 15px;
+  width:100%;
+  padding-top: 5px;
 }
 
 .gender-bold {
@@ -143,7 +151,7 @@ a {
 .banner-container {
   height:auto;
   width:80%;
-
+  
 }
 
 .banner-img {
@@ -159,11 +167,13 @@ a {
   height:700px;
   width: 100%;
   background-color: black;
+  /* margin-top:110px; */
 }
 
 .carousel-img {
   height: 700px;
   opacity: 0.9;
+  padding-top:110px;
 }
 
 .carousel-item-container{
@@ -184,6 +194,7 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   gap:5px;
+  height:auto;
 }
 
 .filter-carousel-item {
@@ -205,6 +216,12 @@ a {
   display:none;
 }
 
+@media screen and (max-width:1075px){
+  .search-form{
+    width:200px;
+  }
+}
+
 @media screen and (max-width:748px){
   .carousel-img {
     height:auto;
@@ -212,5 +229,16 @@ a {
 
   .carousel-item {
     height:auto;
+  }
+}
+
+@media screen and (max-width:990px){
+  .search-form-container{
+    justify-content: start;
+  }
+
+  .search-icon{
+    left:170px;
+    top:115px;
   }
 }
