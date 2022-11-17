@@ -51,6 +51,104 @@ export const MainPage = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+
+
+
+      <div className="carousel-filter-container">
+
+        <Carousel slide={false} className="carousel-item-container">
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100 filter-img"
+              src={HeroImg}
+              alt="First slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100"
+              src="holder.js/800x400?text=Third slide&bg=20232a"
+              alt="Second slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100"
+              src={HeroImg}
+              alt="Third slide"
+            />
+          </Carousel.Item>
+        </Carousel>
+        <Carousel slide={false} className="carousel-item-container">
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100 filter-img"
+              src={HeroImg}
+              alt="First slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100"
+              src="holder.js/800x400?text=Third slide&bg=20232a"
+              alt="Second slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100"
+              src={HeroImg}
+              alt="Third slide"
+            />
+          </Carousel.Item>
+        </Carousel>
+        <Carousel slide={false} className="carousel-item-container">
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100 filter-img"
+              src={HeroImg}
+              alt="First slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100"
+              src="holder.js/800x400?text=Third slide&bg=20232a"
+              alt="Second slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100"
+              src={HeroImg}
+              alt="Third slide"
+            />
+          </Carousel.Item>
+        </Carousel>
+        <Carousel slide={false} className="carousel-item-container">
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100 filter-img"
+              src={HeroImg}
+              alt="First slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100"
+              src="holder.js/800x400?text=Third slide&bg=20232a"
+              alt="Second slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100"
+              src={HeroImg}
+              alt="Third slide"
+            />
+          </Carousel.Item>
+        </Carousel>
+      </div>
     </section>
   );
 };
