@@ -21,13 +21,20 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family:'Poppins', sans-serif;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 a {
   text-decoration: none;
   color:#fefefe;
   cursor: pointer;
+}
+
+header {
+  position: fixed;
+  width:100%;
+  z-index: 9999;
+
 }
 
 .top-banner{
@@ -72,10 +79,11 @@ a {
   flex-direction: row;
   vertical-align: center;
   gap:30px;
-  margin-right:310px;
+  /* margin-right:110px; */
   font-size: 15px;
   height:30px;
-  padding-top: 15px;
+  width:100%;
+  padding-top: 5px;
 }
 
 .gender-bold {
@@ -143,7 +151,7 @@ a {
 .banner-container {
   height:auto;
   width:80%;
-
+  
 }
 
 .banner-img {
@@ -159,11 +167,59 @@ a {
   height:700px;
   width: 100%;
   background-color: black;
+  /* margin-top:110px; */
 }
 
 .carousel-img {
   height: 700px;
   opacity: 0.9;
+  padding-top:110px;
+}
+
+.carousel-item-container{
+  height:300px;
+  width:300px;
+  background-color: #ebebeb;
+}
+
+.carousel-item-filter{
+  height:300px;
+  background-color: #ebebeb;
+  object-fit: contain;
+}
+
+.carousel-filter-container{
+  padding:25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:5px;
+  height:auto;
+}
+
+.filter-carousel-item {
+  width:90%;
+  height:500px;
+  margin:0px !important;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.carousel-indicators{
+  /* display:none; */
+}
+
+.carousel-control-next-icon{
+  display:none;
+}
+.carousel-control-prev-icon{
+  display:none;
+}
+
+@media screen and (max-width:1075px){
+  .search-form{
+    width:200px;
+  }
 }
 
 @media screen and (max-width:748px){
@@ -173,5 +229,16 @@ a {
 
   .carousel-item {
     height:auto;
+  }
+}
+
+@media screen and (max-width:990px){
+  .search-form-container{
+    justify-content: start;
+  }
+
+  .search-icon{
+    left:170px;
+    top:115px;
   }
 }

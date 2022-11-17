@@ -3,6 +3,19 @@ import { useEffect, useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import HeroImg from '../assets/img/bannerimg.webp'
+import AdidasHatBlack from '../assets/img/adidas-hat-black.jpg'
+import BucketHat from '../assets/img/adidas-bucket-hat.webp'
+import Beanie from '../assets/img/adidas-beanie-green.jpg'
+import JacketBlack from '../assets/img/adidas-jacket-black.webp'
+import JacketGray from '../assets/img/adidas-jacket-gray.jpg'
+import WindBreakerBlack from '../assets/img/adidas-windbreaker-black.webp'
+import PantsBlack from '../assets/img/black-sweatpants.webp'
+import PantsBlack2 from '../assets/img/black-sweatpants-2.webp'
+import ShortsBlack from '../assets/img/black-shorts.webp'
+import ShoesBlack from '../assets/img/shoes-black.webp'
+import ShoesWhite from '../assets/img/shoes-white.webp'
+import ShoesTan from '../assets/img/shoes-tan.webp'
+
 import Carousel from 'react-bootstrap/Carousel';
 
 export const MainPage = () => {
@@ -13,7 +26,7 @@ export const MainPage = () => {
   return (
     <section>
       <Carousel>
-        <Carousel.Item className="carousel-item">
+        <Carousel.Item className="carousel-item" interval={2000}>
           <img
             className="d-block w-100 carousel-img"
             src={HeroImg}
@@ -51,6 +64,104 @@ export const MainPage = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+
+
+
+      <div className="carousel-filter-container">
+
+        <Carousel slide={false} className="carousel-item-container">
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100 filter-img"
+              src={AdidasHatBlack}
+              alt="First slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100"
+              src={Beanie}
+              alt="Second slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100"
+              src={BucketHat}
+              alt="Third slide"
+            />
+          </Carousel.Item>
+        </Carousel>
+        <Carousel slide={false} className="carousel-item-container">
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100 filter-img"
+              src={JacketBlack}
+              alt="First slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100"
+              src={JacketGray}
+              alt="Second slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100"
+              src={WindBreakerBlack}
+              alt="Third slide"
+            />
+          </Carousel.Item>
+        </Carousel>
+        <Carousel slide={false} className="carousel-item-container">
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100 filter-img"
+              src={PantsBlack}
+              alt="First slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100"
+              src={ShortsBlack}
+              alt="Second slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100"
+              src={PantsBlack2}
+              alt="Third slide"
+            />
+          </Carousel.Item>
+        </Carousel>
+        <Carousel slide={false} className="carousel-item-container">
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100 filter-img"
+              src={ShoesBlack}
+              alt="First slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100"
+              src={ShoesWhite}
+              alt="Second slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item-filter">
+            <img
+              className="d-block w-100"
+              src={ShoesTan}
+              alt="Third slide"
+            />
+          </Carousel.Item>
+        </Carousel>
+      </div>
     </section>
   );
 };
