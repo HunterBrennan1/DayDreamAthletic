@@ -12,10 +12,10 @@ export const MainPage = () => {
 
   return (
     <section>
-      <Carousel className="carousel-container">
-        <Carousel.Item>
+      <Carousel>
+        <Carousel.Item className="carousel-item">
           <img
-            className="d-block w-100"
+            className="d-block w-100 carousel-img"
             src={HeroImg}
             alt="First slide"
           />
@@ -26,7 +26,7 @@ export const MainPage = () => {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block w-100 carousel-img"
             src={HeroImg}
             alt="Second slide"
           />
@@ -38,7 +38,7 @@ export const MainPage = () => {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block w-100 carousel-img"
             src={HeroImg}
             alt="Third slide"
           />
