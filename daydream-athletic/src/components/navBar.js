@@ -50,23 +50,25 @@ export const NavBar = () => {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Nav.Link href="#" disabled>
-                Link
-              </Nav.Link>
+
             </Nav>
-            <Form className="d-flex">
-              <Form.Control
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success" className="search-btn">Search</Button>
-            </Form>
+            {/* <div className="form-social-container"> */}
+            <div className="search-form-container">
+              <Form className="d-flex ">
+                <Form.Control
+                  type="search"
+                  placeholder="Search"
+                  className="me-2 search-form"
+                  aria-label="Search"
+                />
+                <Button variant="outline-success" className="search-btn">Search</Button>
+              </Form>
+            </div>
             <div className="nav-login-out">
               <img src={Cart} className="nav-btn-icons"></img>
               <img src={Login} className="nav-btn-icons"></img>
             </div>
+            {/* </div> */}
           </Navbar.Collapse>
         </Container>
       </Navbar>
