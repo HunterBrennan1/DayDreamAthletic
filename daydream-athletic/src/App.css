@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Poppins:wght@100;200;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600&display=swap');
+
 
 *{
   margin:0;
@@ -26,6 +27,7 @@ body {
 a {
   text-decoration: none;
   color:#fefefe;
+  cursor: pointer;
 }
 
 .top-banner{
@@ -35,7 +37,7 @@ a {
   color:#fff;
   text-decoration: none;
   justify-content: center;
-  height:50px;
+  height:40px;
   width:100%;
   align-items: center;
   vertical-align: middle;
@@ -45,7 +47,11 @@ a {
 }
 
 .discount-title {
-  font-size: 25px;
+  font-size: 15px;
+}
+
+.discount-top-banner {
+  font-size: 12px;
 }
 
 .NavBar {
@@ -55,11 +61,26 @@ a {
 }
 
 .logo {
-  /* background-color:#121212 ; */
-  /* color:#fefefe; */
   padding:10px;
   border-radius: 7px;
   font-weight: 400;
+}
+
+.nav-filter-link {
+  display: flex;
+  z-index: 2;
+  flex-direction: row;
+  vertical-align: center;
+  gap:30px;
+  margin-right:310px;
+  font-size: 15px;
+  height:30px;
+  padding-top: 15px;
+}
+
+.gender-bold {
+  color:#121212;
+  font-weight: 600;
 }
 
 .form-social-container {
@@ -73,6 +94,8 @@ a {
   width:300px;
   border-radius: 30px;
   padding-left: 15px;
+  background-color: #ebebeb;
+  color:#121212;
 }
 
 .search-form-container {
@@ -81,6 +104,13 @@ a {
   object-position: center;
   height:40px;
   margin-top:5px;
+}
+
+.search-icon {
+  position: absolute;
+  height:28px;
+  right:205px;
+  top:25px;
 }
 
 .nav-login-out {
