@@ -15,6 +15,10 @@ import ShortsBlack from '../assets/img/black-shorts.webp'
 import ShoesBlack from '../assets/img/shoes-black.webp'
 import ShoesWhite from '../assets/img/shoes-white.webp'
 import ShoesTan from '../assets/img/shoes-tan.webp'
+import FifaBanner from '../assets/img/fifabanner.webp'
+import FifaBanner2 from '../assets/img/fifabanner2.jpg'
+import Arrow from '../assets/img/arrow.svg'
+import Ball from '../assets/img/ball.png'
 
 import Carousel from 'react-bootstrap/Carousel';
 
@@ -29,12 +33,18 @@ export const MainPage = () => {
         <Carousel.Item className="carousel-item" interval={2000}>
           <img
             className="d-block w-100 carousel-img"
-            src={HeroImg}
+            src={FifaBanner2}
             alt="First slide"
           />
-          <Carousel.Caption>
-            {/* <h3>First slide label</h3> */}
-            {/* <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
+          <Carousel.Caption className="banner-text">
+            <div>
+              <h3 className="banner-title">FIFA WORLD CUP 2022</h3>
+              <p className="banner-desc">DON'T MISS OUT ON EXCLUSIVE WOLRD CUP CLOTHING DEALS!</p>
+            </div>
+            <div className="banner-btn-container">
+              <a className="banner-btn banner-login-btn">LOGIN OR SIGNUP!<img src={Arrow} className="arrow"></img></a>
+              <a className="banner-btn banner-shop-btn">SHOP NOW<img src={Arrow} className="arrow"></img></a>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -44,23 +54,33 @@ export const MainPage = () => {
             alt="Second slide"
           />
 
-          <Carousel.Caption>
-            {/* <h3>Second slide label</h3> */}
-            {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
+          <Carousel.Caption className="banner-text">
+            <div>
+              <h3 className="banner-title">FIFA WORLD CUP 2022</h3>
+              <p className="banner-desc">DON'T MISS OUT ON EXCLUSIVE WOLRD CUP CLOTHING DEALS!</p>
+            </div>
+            <div className="banner-btn-container">
+              <a className="banner-btn banner-login-btn">LOGIN OR SIGNUP!<img src={Arrow} className="arrow"></img></a>
+              <a className="banner-btn banner-shop-btn">SHOP NOW<img src={Arrow} className="arrow"></img></a>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100 carousel-img"
-            src={HeroImg}
+            src={Ball}
             alt="Third slide"
           />
 
-          <Carousel.Caption>
-            {/* <h3>Third slide label</h3> */}
-            {/* <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p> */}
+          <Carousel.Caption className="banner-text">
+            <div>
+              <h3 className="banner-title">FIFA WORLD CUP 2022</h3>
+              <p className="banner-desc">DON'T MISS OUT ON EXCLUSIVE WOLRD CUP CLOTHING DEALS!</p>
+            </div>
+            <div className="banner-btn-container">
+              <a className="banner-btn banner-login-btn">LOGIN OR SIGNUP!<img src={Arrow} className="arrow"></img></a>
+              <a className="banner-btn banner-shop-btn">SHOP NOW<img src={Arrow} className="arrow"></img></a>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
