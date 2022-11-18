@@ -17,24 +17,20 @@ AOS.init();
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("all");
   const [scrolled, setScrolled] = useState(false);
+  const Header = document.querySelector("header")
+  let lastScrollY = window.scrollY;
 
-  useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+  window.addEventListener("scroll", () => {
+    if (lastScrollY < window.scrollY) {
+      Header.classList.add("nav--hidden");
+    } else {
+      Header.classList.remove("nav--hidden");
+    }
 
-    window.addEventListener("scroll", onScroll);
+    lastScrollY = window.scrollY;
+  });
 
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
-  const onUpdateActiveLink = (value) => {
-    setActiveLink(value);
-  };
 
   return (
     <header>
@@ -75,7 +71,8 @@ export const NavBar = () => {
               </Form>
             </div>
             <div className="nav-login-out">
-              <img src={Cart} className="nav-btn-icons"></img>
+              <img src={Cart} className="nav-btn-icons cart-icon"></img>
+              <span className="cart-count">0</span>
               <img src={Login} className="nav-btn-icons"></img>
             </div>
             {/* </div> */}

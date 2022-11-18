@@ -39,7 +39,13 @@ header {
   position: fixed;
   width:100%;
   z-index: 9999;
+  /* transition: transform 0.2s; */
 
+}
+
+.nav--hidden {
+  transform: translateY(-110px);
+  transition: transform 0.2s;
 }
 
 .top-banner{
@@ -143,6 +149,24 @@ header {
   flex-direction: row;
   padding:15px;
   gap:10px;
+}
+
+.cart-count {
+  width:22px;
+  height:22px;
+  border-radius: 50%;
+  background-color: #0071ae;
+  font-size:12px;
+  color:#fff;
+  position: absolute;
+  top:14px;
+  right:51px;
+  opacity:0.9;
+  font-weight:700;
+  text-align: center;
+  padding-top:3px;
+  padding-right:1px;
+  
 }
 
 .nav-btn-icons {
@@ -332,6 +356,23 @@ header {
   .search-icon{
     left:170px;
     top:115px;
+  }
+
+  .cart-count {
+    width:22px;
+    height:22px;
+    border-radius: 50%;
+    background-color: #0071ae;
+    font-size:12px;
+    color:#fff;
+    position: absolute;
+    top:154px;
+    left:39px;
+    opacity:0.9;
+    font-weight:700;
+    text-align: center;
+    padding-top:3px;
+    padding-right:1px;
   }
 }
 
