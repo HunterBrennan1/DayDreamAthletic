@@ -15,6 +15,8 @@ import ShortsBlack from '../assets/img/black-shorts.webp'
 import ShoesBlack from '../assets/img/shoes-black.webp'
 import ShoesWhite from '../assets/img/shoes-white.webp'
 import ShoesTan from '../assets/img/shoes-tan.webp'
+import FifaBanner from '../assets/img/fifabanner.webp'
+import FifaBanner2 from '../assets/img/fifabanner2.jpg'
 
 import Carousel from 'react-bootstrap/Carousel';
 
@@ -29,7 +31,7 @@ export const MainPage = () => {
         <Carousel.Item className="carousel-item" interval={2000}>
           <img
             className="d-block w-100 carousel-img"
-            src={HeroImg}
+            src={FifaBanner2}
             alt="First slide"
           />
           <Carousel.Caption>
@@ -52,7 +54,7 @@ export const MainPage = () => {
         <Carousel.Item>
           <img
             className="d-block w-100 carousel-img"
-            src={HeroImg}
+            src={FifaBanner2}
             alt="Third slide"
           />
 

@@ -161,6 +161,7 @@ header {
 
 .carousel-container {
   height:800px;
+  
 }
 
 .carousel-item {
@@ -168,11 +169,14 @@ header {
   width: 100%;
   background-color: black;
   /* margin-top:110px; */
+  z-index: 1;
+  /* padding-top:50px; */
+
 }
 
 .carousel-img {
-  height: 700px;
-  opacity: 0.9;
+  height:700px;
+  /* opacity: 0.9; */
   padding-top:110px;
 }
 
@@ -195,6 +199,7 @@ header {
   justify-content: center;
   gap:5px;
   height:auto;
+  overflow-y:scroll;
 }
 
 .filter-carousel-item {
