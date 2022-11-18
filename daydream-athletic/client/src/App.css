@@ -30,6 +30,11 @@ a {
   cursor: pointer;
 }
 
+a:hover {
+  text-decoration: none;
+  color:#121212;
+}
+
 header {
   position: fixed;
   width:100%;
@@ -59,6 +64,11 @@ header {
 
 .discount-top-banner {
   font-size: 12px;
+  padding-top:2px;
+}
+
+.discount-top-banner:hover{
+  color:#dbdbdb;
 }
 
 .NavBar {
@@ -68,9 +78,16 @@ header {
 }
 
 .logo {
-  padding:10px;
   border-radius: 7px;
-  font-weight: 400;
+  font-weight: 600;
+  height:50px;
+  padding-bottom:20px !important;
+}
+
+.logo-img{
+  height:40px;
+  border-radius: 7px;
+  
 }
 
 .nav-filter-link {
@@ -194,6 +211,10 @@ header {
   background-color: #121212;
   margin-right: 10px;
   font-size: 16px;
+}
+
+.banner-btn:hover{
+  color:#fff;
 }
 
 .arrow {

@@ -9,6 +9,7 @@ import AOS from "aos";
 import Login from '../assets/img/loginicon.svg'
 import Cart from '../assets/img/iconmonstr-shopping-bag-4.svg'
 import Search from '../assets/img/searchicon.svg'
+import Logoimg from '../assets/img/daydreamlogo.png'
 import "aos/dist/aos.css";
 
 AOS.init();
@@ -43,7 +44,7 @@ export const NavBar = () => {
       </div>
       <Navbar bg="light" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#" className="logo">Day Dream Athletic</Navbar.Brand>
+          <Navbar.Brand href="#" className="logo"><img src={Logoimg} className="logo-img" alt="logo"></img></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll" className="nav-collapse">
             <Nav
