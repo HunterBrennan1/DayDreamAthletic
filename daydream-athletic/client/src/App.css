@@ -293,6 +293,29 @@ header {
   .carousel-img{
     height:auto;
   }
+
+  .carousel-item-container{
+    height:200px;
+    width:auto;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: flex-end;
+   
+  }
+  
+  .carousel-item-filter{
+    height:200px;
+    width:200px;
+    background-color: #ebebeb;
+    object-fit: contain;
+    
+  }
+
+  .carousel-inner{
+    display: flex;
+    justify-content: space-between;
+  }
+
 }
 
 @media screen and (max-width:1075px){
@@ -333,6 +356,25 @@ header {
   .arrow {
     width:20px;
     height:20px;
+  }
+}
+
+@media screen and (max-width:865px){
+  .carousel-item-container{
+    height:270px;
+    width:auto;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: flex-end;
+   
+  }
+  
+  .carousel-item-filter{
+    height:270px;
+    width:270px;
+    background-color: #ebebeb;
+    object-fit: contain;
+    
   }
 }
 
@@ -386,6 +428,44 @@ header {
 
   .banner-shop-btn{
     width:105px;
+  }
+}
+
+@media screen and (max-width:595px){
+  .carousel-item-container{
+    height:200px;
+    width:auto;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: flex-end;
+   
+  }
+  
+  .carousel-item-filter{
+    height:200px;
+    width:200px;
+    background-color: #ebebeb;
+    object-fit: contain;
+    
+  }
+}
+
+@media screen and (max-width:455px){
+  .carousel-item-container{
+    height:150px;
+    width:auto;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: flex-end;
+   
+  }
+  
+  .carousel-item-filter{
+    height:150px;
+    width:150px;
+    background-color: #ebebeb;
+    object-fit: contain;
+    
   }
 }
 

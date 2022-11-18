@@ -96,6 +96,9 @@ export const MainPage = () => {
               src={AdidasHatBlack}
               alt="First slide"
             />
+            <div>
+              <h1>test</h1>
+            </div>
           </Carousel.Item>
           <Carousel.Item className="carousel-item-filter">
             <img
