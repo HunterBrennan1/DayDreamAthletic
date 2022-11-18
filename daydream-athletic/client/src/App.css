@@ -188,7 +188,7 @@ header {
   cursor: pointer;
   display: inline-flex;
   justify-content: flex-start;
-  min-height: 50px;
+  max-height: 50px;
   width:200px;
   padding:10px;
   background-color: #121212;
@@ -280,6 +280,41 @@ header {
   }
 }
 
+@media screen and (max-width:990px){
+  .search-form-container{
+    justify-content: start;
+  }
+
+  .search-icon{
+    left:170px;
+    top:115px;
+  }
+}
+
+@media screen and (max-width:950px){
+  .banner-text{
+    width:200px;
+  }
+
+  .banner-title{
+    font-size:25px;
+  }
+
+  .banner-desc{
+    font-size:13px;
+  }
+
+  .banner-btn{
+    font-size: 13px;
+    width:170px;
+    padding:10px;
+  }
+  .arrow {
+    width:20px;
+    height:20px;
+  }
+}
+
 @media screen and (max-width:748px){
   .carousel-img {
     height:auto;
@@ -292,15 +327,45 @@ header {
   .carousel-item {
     height:auto;
   }
-}
 
-@media screen and (max-width:990px){
-  .search-form-container{
-    justify-content: start;
-  }
-
-  .search-icon{
-    left:170px;
-    top:115px;
+  .banner-text{
+    top:30px;
   }
 }
+
+@media screen and (max-width:600px){
+  .banner-text{
+    width:300px;
+    top:50px;
+    left:40px;
+  }
+
+  .banner-btn-container{
+    flex-direction: row;
+  }
+
+  .banner-title{
+    font-size:20px;
+    line-height: 20px;
+  }
+
+  .banner-desc{
+    font-size:12px;
+  }
+
+  .banner-btn{
+    font-size: 10px;
+    width:133px;
+    padding:7px;
+  }
+  .arrow {
+    width:20px;
+    height:20px;
+  }
+
+  .banner-shop-btn{
+    width:105px;
+  }
+}
+
+

@@ -18,6 +18,7 @@ import ShoesTan from '../assets/img/shoes-tan.webp'
 import FifaBanner from '../assets/img/fifabanner.webp'
 import FifaBanner2 from '../assets/img/fifabanner2.jpg'
 import Arrow from '../assets/img/arrow.svg'
+import Ball from '../assets/img/ball.png'
 
 import Carousel from 'react-bootstrap/Carousel';
 
@@ -67,7 +68,7 @@ export const MainPage = () => {
         <Carousel.Item>
           <img
             className="d-block w-100 carousel-img"
-            src={FifaBanner2}
+            src={Ball}
             alt="Third slide"
           />
 
