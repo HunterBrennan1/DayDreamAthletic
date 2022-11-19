@@ -69,7 +69,9 @@ export const NavBar = () => {
                   aria-label="Search"
                 />
                 <div className="search-icon-container">
-                  <img src={Search} className="search-icon"></img>
+                  <a>
+                    <img src={Search} className="search-icon"></img>
+                  </a>
                 </div>
 
                 <Button variant="outline-success" className="search-btn">Search</Button>

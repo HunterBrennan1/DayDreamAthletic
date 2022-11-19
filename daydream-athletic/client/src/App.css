@@ -147,7 +147,7 @@ header {
 
 .search-icon {
   height:28px;
-  margin-top:5px;
+  margin-top:7px;
   margin-right:5px;
   cursor: pointer;
   
@@ -354,10 +354,33 @@ header {
 
 .carousel-img {
   height:80vh;
-  opacity: 0.9;
+  opacity:1;
   /* padding-top:90px; */
   margin-top:90px;
 
+}
+
+.filter-img:hover{
+  opacity:0.5;
+}
+
+.filter-title {
+  position:absolute;
+  align-items: center;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  top:120px;
+  font-size: 40px;
+  color: #121212;
+  font-weight: 600;
+  opacity: 1;
+  z-index: -1;
+}
+
+.filter-title:hover{
+  opacity: 1 !important;
+  z-index: 9999;
 }
 
 .carousel-item-container{
