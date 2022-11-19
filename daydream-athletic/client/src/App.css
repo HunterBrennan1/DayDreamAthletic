@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family:'Poppins', sans-serif;
-  /* overflow: hidden; */
+  overflow-x: hidden;
 }
 
 a {
@@ -149,6 +149,88 @@ header {
   flex-direction: row;
   padding:15px;
   gap:10px;
+}
+
+.modal-open{
+  padding-right:0px !important;
+}
+
+.signup-info{
+  text-align: center;
+}
+
+.signup-discount{
+  text-align: center;
+}
+
+.modal {
+  display: flex;
+  flex-direction: row;
+}
+
+.modal-header {
+  justify-content: center;
+
+}
+
+.btn-close {
+  z-index: 5;
+  margin-left:0px !important;
+  position: absolute;
+  top:15px;
+  right:15px;
+}
+
+.modal-bottom-btn{
+  width:100%;
+  border-radius: 0px;
+  background-color: #121212;
+  border: none;
+  padding-top:8px;
+  padding-bottom:8px;
+  
+}
+
+.modal-login-signup-form-container{
+  display: flex;
+  flex-direction: row;
+  /* gap:34px; */
+}
+
+.modal-login-signup-form{
+  width:200px !important;
+  margin-right:0px !important;
+  margin-top:10px;
+  border-radius: 0px;
+  background-color: #f8f9fa;
+  color:#121212;
+  
+}
+
+.login-icon-modal{
+  background-color: #f8f9fa !important;
+  border: none;
+  padding:0px;
+}
+
+.modal-content {
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  gap:33px;
+  padding:15px;
+  border-radius: 0px;
+  border: 2px solid #121212;
+}
+
+.modal-footer{
+  justify-content: flex-start;
+}
+
+.forgot-password{
+  width:100%;
+  text-align: center !important;
+  color:#0071ae;
 }
 
 .cart-count {
