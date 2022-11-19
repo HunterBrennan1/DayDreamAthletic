@@ -42,7 +42,9 @@ export const NavBar = () => {
         <Container fluid>
           <Navbar.Brand href="#" className="logo"><img src={Logoimg} className="logo-img" alt="logo"></img></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
+
           <Navbar.Collapse id="navbarScroll" className="nav-collapse">
+
             <Nav
               className="me-auto my-2 my-lg-0"
               style={{ maxHeight: '100px' }}
@@ -66,22 +68,26 @@ export const NavBar = () => {
                   className="me-2 search-form"
                   aria-label="Search"
                 />
-                <img src={Search} className="search-icon"></img>
+                <div className="search-icon-container">
+                  <img src={Search} className="search-icon"></img>
+                </div>
+
                 <Button variant="outline-success" className="search-btn">Search</Button>
               </Form>
             </div>
-            <div className="nav-login-out">
-              <img src={Cart} className="nav-btn-icons cart-icon"></img>
-              <span className="cart-count">0</span>
 
-              <LoginSignup />
-
-            </div>
             {/* </div> */}
           </Navbar.Collapse>
+          <div className="nav-login-out">
+            <img src={Cart} className="nav-btn-icons cart-icon"></img>
+            <span className="cart-count">0</span>
+
+            <LoginSignup />
+
+          </div>
         </Container>
       </Navbar>
-    </header>
+    </header >
   );
 };
 

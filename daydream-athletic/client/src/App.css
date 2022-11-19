@@ -88,6 +88,7 @@ header {
   font-weight: 600;
   height:50px;
   padding-bottom:20px !important;
+  border: 1px solid #121212;
 }
 
 .logo-img{
@@ -122,11 +123,13 @@ header {
 
 .search-form {
   padding:5px;
-  width:300px;
+  width:272px;
   border-radius: 0px;
   padding-left: 15px;
   background-color: #ebebeb;
   color:#121212;
+  margin-right:0px !important;
+  border: 0px !important;
 }
 
 .search-form-container {
@@ -137,11 +140,17 @@ header {
   margin-top:5px;
 }
 
+.search-icon-container{
+  background-color: #ebebeb;
+  margin-right:10px;
+}
+
 .search-icon {
-  position: absolute;
   height:28px;
-  right:205px;
-  top:25px;
+  margin-top:5px;
+  margin-right:5px;
+  cursor: pointer;
+  
 }
 
 .nav-login-out {
@@ -166,6 +175,7 @@ header {
 .modal {
   display: flex;
   flex-direction: row;
+
 }
 
 .modal-header {
@@ -431,13 +441,32 @@ header {
 }
 
 @media screen and (max-width:990px){
+
+  .nav-filter-link{
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
   .search-form-container{
-    justify-content: start;
+    justify-content: center;
+    width:100% !important;
+    margin-bottom: 5px;
+  }
+
+  .search-form{
+    width:100%;
   }
 
   .search-icon{
-    left:170px;
-    top:115px;
+    left:475px;
+    top:110px;
+  }
+
+  .nav-login-out{
+    justify-content: flex-end;
+    position: absolute;
+    right:20px;
+    top:0px;
   }
 
   .cart-count {
@@ -448,13 +477,46 @@ header {
     font-size:12px;
     color:#fff;
     position: absolute;
-    top:154px;
-    left:39px;
+    top:5px;
+    left:26px;
     opacity:0.9;
     font-weight:700;
     text-align: center;
     padding-top:3px;
     padding-right:1px;
+  }
+  .modal-content {
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    /* gap:33px; */
+    padding:15px;
+    border-radius: 0px;
+    border: 2px solid #121212;
+    position: absolute;
+    top:94px;
+    width:100%;
+  }
+
+  .modal-dialog {
+    position:static;
+    margin:0px !important;
+  }
+
+  .modal-login-signup-form-container{
+    justify-content:center;
+  }
+  .modal-login-signup-form{
+    width:300px !important;
+  }
+
+  .btn-close{
+    right:40px;
+    top: 27px;
+  }
+
+  .logo {
+    display:none;
   }
 }
 
@@ -480,6 +542,8 @@ header {
     width:20px;
     height:20px;
   }
+
+ 
 }
 
 @media screen and (max-width:865px){
@@ -517,6 +581,43 @@ header {
   .banner-text{
     top:30px;
   }
+}
+
+@media screen and (max-width:650px){
+  .modal-login-signup-form-container{
+    justify-content:center;
+    flex-direction: column;
+  }
+  .modal-login-signup-form{
+    width:200px !important;
+  }
+
+  .btn-close{
+    right:40px;
+    top: 20px;
+  }
+
+  .signup-info {
+    font-size: 15px;
+    display:none;
+  }
+
+  .signup-discount{
+    display:none;
+  }
+
+  .modal-content {
+    gap:0px;
+  }
+
+  .modal-header{
+    padding:0px;
+  }
+
+  .modal-login-signup-form{
+    width:100% !important;
+  }
+
 }
 
 @media screen and (max-width:600px){
