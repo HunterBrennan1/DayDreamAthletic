@@ -4,11 +4,12 @@ import Navbar from "react-bootstrap/Navbar";
 import { useEffect, useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import AOS from "aos";
 import Login from '../assets/img/loginicon.svg'
 import Cart from '../assets/img/iconmonstr-shopping-bag-4.svg'
 import Search from '../assets/img/searchicon.svg'
+import Logoimg from '../assets/img/daydreamlogo.png'
+import LoginSignup from '../components/login-signup'
 import "aos/dist/aos.css";
 
 AOS.init();
@@ -16,24 +17,20 @@ AOS.init();
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("all");
   const [scrolled, setScrolled] = useState(false);
+  // const Header = document.querySelector("header")
+  // let lastScrollY = window.scrollY;
 
-  useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+  // window.addEventListener("scroll", () => {
+  //   if (lastScrollY < window.scrollY) {
+  //     Header.classList.add("nav--hidden");
+  //   } else {
+  //     Header.classList.remove("nav--hidden");
+  //   }
 
-    window.addEventListener("scroll", onScroll);
+  //   lastScrollY = window.scrollY;
+  // });
 
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
-  const onUpdateActiveLink = (value) => {
-    setActiveLink(value);
-  };
 
   return (
     <header>
@@ -43,9 +40,11 @@ export const NavBar = () => {
       </div>
       <Navbar bg="light" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#" className="logo">Day Dream Athletic</Navbar.Brand>
+          <Navbar.Brand href="#" className="logo"><img src={Logoimg} className="logo-img" alt="logo"></img></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
+
           <Navbar.Collapse id="navbarScroll" className="nav-collapse">
+
             <Nav
               className="me-auto my-2 my-lg-0"
               style={{ maxHeight: '100px' }}
@@ -69,19 +68,30 @@ export const NavBar = () => {
                   className="me-2 search-form"
                   aria-label="Search"
                 />
-                <img src={Search} className="search-icon"></img>
+                <div className="search-icon-container">
+                  <a>
+                    <img src={Search} className="search-icon"></img>
+                  </a>
+                </div>
+
                 <Button variant="outline-success" className="search-btn">Search</Button>
               </Form>
             </div>
-            <div className="nav-login-out">
-              <img src={Cart} className="nav-btn-icons"></img>
-              <img src={Login} className="nav-btn-icons"></img>
-            </div>
+
             {/* </div> */}
           </Navbar.Collapse>
+          <div className="nav-login-out">
+            <img src={Cart} className="nav-btn-icons cart-icon"></img>
+            <span className="cart-count">0</span>
+
+            <LoginSignup />
+
+          </div>
         </Container>
       </Navbar>
-    </header>
+    </header >
   );
 };
+
+
 

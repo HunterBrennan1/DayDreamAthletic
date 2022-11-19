@@ -91,94 +91,133 @@ export const MainPage = () => {
 
         <Carousel slide={false} className="carousel-item-container">
           <Carousel.Item className="carousel-item-filter">
-            <img
-              className="d-block w-100 filter-img"
-              src={AdidasHatBlack}
-              alt="First slide"
-            />
+            <a>
+              <span className="filter-title">HATS</span>
+              <img
+                className="d-block w-100 filter-img"
+                src={AdidasHatBlack}
+                alt="First slide"
+              />
+            </a>
+            <div>
+              <h1>test</h1>
+            </div>
           </Carousel.Item>
           <Carousel.Item className="carousel-item-filter">
-            <img
-              className="d-block w-100"
-              src={Beanie}
-              alt="Second slide"
-            />
+            <a>
+              <span className="filter-title">HATS</span>
+              <img
+                className="d-block w-100 filter-img"
+                src={Beanie}
+                alt="Second slide"
+              />
+            </a>
           </Carousel.Item>
           <Carousel.Item className="carousel-item-filter">
-            <img
-              className="d-block w-100"
-              src={BucketHat}
-              alt="Third slide"
-            />
-          </Carousel.Item>
-        </Carousel>
-        <Carousel slide={false} className="carousel-item-container">
-          <Carousel.Item className="carousel-item-filter">
-            <img
-              className="d-block w-100 filter-img"
-              src={JacketBlack}
-              alt="First slide"
-            />
-          </Carousel.Item>
-          <Carousel.Item className="carousel-item-filter">
-            <img
-              className="d-block w-100"
-              src={JacketGray}
-              alt="Second slide"
-            />
-          </Carousel.Item>
-          <Carousel.Item className="carousel-item-filter">
-            <img
-              className="d-block w-100"
-              src={WindBreakerBlack}
-              alt="Third slide"
-            />
+            <a>
+              <span className="filter-title">HATS</span>
+              <img
+                className="d-block w-100 filter-img"
+                src={BucketHat}
+                alt="Third slide"
+              />
+            </a>
           </Carousel.Item>
         </Carousel>
         <Carousel slide={false} className="carousel-item-container">
           <Carousel.Item className="carousel-item-filter">
-            <img
-              className="d-block w-100 filter-img"
-              src={PantsBlack}
-              alt="First slide"
-            />
+            <a>
+              <span className="filter-title">TOPS</span>
+              <img
+                className="d-block w-100 filter-img"
+                src={JacketBlack}
+                alt="First slide"
+              />
+            </a>
           </Carousel.Item>
           <Carousel.Item className="carousel-item-filter">
-            <img
-              className="d-block w-100"
-              src={ShortsBlack}
-              alt="Second slide"
-            />
+            <a>
+              <span className="filter-title">TOPS</span>
+              <img
+                className="d-block w-100 filter-img"
+                src={JacketGray}
+                alt="Second slide"
+              />
+            </a>
           </Carousel.Item>
           <Carousel.Item className="carousel-item-filter">
-            <img
-              className="d-block w-100"
-              src={PantsBlack2}
-              alt="Third slide"
-            />
+            <a>
+              <span className="filter-title">TOP</span>
+              <img
+                className="d-block w-100 filter-img"
+                src={WindBreakerBlack}
+                alt="Third slide"
+              />
+            </a>
           </Carousel.Item>
         </Carousel>
         <Carousel slide={false} className="carousel-item-container">
           <Carousel.Item className="carousel-item-filter">
-            <img
-              className="d-block w-100 filter-img"
-              src={ShoesBlack}
-              alt="First slide"
-            />
+            <a>
+              <span className="filter-title">BOTTOMS</span>
+              <img
+                className="d-block w-100 filter-img"
+                src={PantsBlack}
+                alt="First slide"
+              />
+            </a>
           </Carousel.Item>
           <Carousel.Item className="carousel-item-filter">
-            <img
-              className="d-block w-100"
-              src={ShoesWhite}
-              alt="Second slide"
-            />
+            <a>
+              <span className="filter-title">BOTTOMS</span>
+              <img
+                className="d-block w-100 filter-img"
+                src={ShortsBlack}
+                alt="Second slide"
+              />
+            </a>
           </Carousel.Item>
           <Carousel.Item className="carousel-item-filter">
-            <img
-              className="d-block w-100"
-              src={ShoesTan}
-              alt="Third slide"
-            />
+            <a>
+              <span className="filter-title">BOTTOMS</span>
+              <img
+                className="d-block w-100 filter-img"
+                src={PantsBlack2}
+                alt="Third slide"
+              />
+            </a>
+          </Carousel.Item>
+        </Carousel>
+        <Carousel slide={false} className="carousel-item-container">
+          <Carousel.Item className="carousel-item-filter">
+            <a>
+              <span className="filter-title">SHOES</span>
+              <img
+                className="d-block w-100 filter-img"
+                src={ShoesBlack}
+                alt="First slide"
+              />
+            </a>
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item-filter">
+            <a>
+              <span className="filter-title">SHOES</span>
+              <img
+                className="d-block w-100 filter-img"
+                src={ShoesWhite}
+                alt="Second slide"
+              />
+            </a>
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item-filter">
+            <a>
+              <span className="filter-title">SHOES</span>
+              <img
+                className="d-block w-100 filter-img"
+                src={ShoesTan}
+                alt="Third slide"
+              />
+            </a>
           </Carousel.Item>
         </Carousel>
       </div>

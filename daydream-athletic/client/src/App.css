@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family:'Poppins', sans-serif;
-  /* overflow: hidden; */
+  overflow-x: hidden;
 }
 
 a {
@@ -30,11 +30,22 @@ a {
   cursor: pointer;
 }
 
+a:hover {
+  text-decoration: none;
+  color:#121212;
+}
+
 header {
   position: fixed;
   width:100%;
   z-index: 9999;
+  /* transition: transform 0.2s; */
 
+}
+
+.nav--hidden {
+  transform: translateY(-110px);
+  transition: transform 0.2s;
 }
 
 .top-banner{
@@ -59,6 +70,11 @@ header {
 
 .discount-top-banner {
   font-size: 12px;
+  padding-top:2px;
+}
+
+.discount-top-banner:hover{
+  color:#dbdbdb;
 }
 
 .NavBar {
@@ -68,9 +84,17 @@ header {
 }
 
 .logo {
-  padding:10px;
   border-radius: 7px;
-  font-weight: 400;
+  font-weight: 600;
+  height:50px;
+  padding-bottom:20px !important;
+  border: 1px solid #121212;
+}
+
+.logo-img{
+  height:40px;
+  border-radius: 7px;
+  
 }
 
 .nav-filter-link {
@@ -99,11 +123,13 @@ header {
 
 .search-form {
   padding:5px;
-  width:300px;
+  width:272px;
   border-radius: 0px;
   padding-left: 15px;
   background-color: #ebebeb;
   color:#121212;
+  margin-right:0px !important;
+  border: 0px !important;
 }
 
 .search-form-container {
@@ -114,11 +140,17 @@ header {
   margin-top:5px;
 }
 
+.search-icon-container{
+  background-color: #ebebeb;
+  margin-right:10px;
+}
+
 .search-icon {
-  position: absolute;
   height:28px;
-  right:205px;
-  top:25px;
+  margin-top:7px;
+  margin-right:5px;
+  cursor: pointer;
+  
 }
 
 .nav-login-out {
@@ -126,6 +158,107 @@ header {
   flex-direction: row;
   padding:15px;
   gap:10px;
+}
+
+.modal-open{
+  padding-right:0px !important;
+}
+
+.signup-info{
+  text-align: center;
+}
+
+.signup-discount{
+  text-align: center;
+}
+
+.modal {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.modal-header {
+  justify-content: center;
+
+}
+
+.btn-close {
+  z-index: 5;
+  margin-left:0px !important;
+  position: absolute;
+  top:15px;
+  right:15px;
+}
+
+.modal-bottom-btn{
+  width:100%;
+  border-radius: 0px;
+  background-color: #121212;
+  border: none;
+  padding-top:8px;
+  padding-bottom:8px;
+  
+}
+
+.modal-login-signup-form-container{
+  display: flex;
+  flex-direction: row;
+  /* gap:34px; */
+}
+
+.modal-login-signup-form{
+  width:200px !important;
+  margin-right:0px !important;
+  margin-top:10px;
+  border-radius: 0px;
+  background-color: #f8f9fa;
+  color:#121212;
+  
+}
+
+.login-icon-modal{
+  background-color: #f8f9fa !important;
+  border: none;
+  padding:0px;
+}
+
+.modal-content {
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  gap:33px;
+  padding:15px;
+  border-radius: 0px;
+  border: 2px solid #121212;
+}
+
+.modal-footer{
+  justify-content: flex-start;
+}
+
+.forgot-password{
+  width:100%;
+  text-align: center !important;
+  color:#0071ae;
+}
+
+.cart-count {
+  width:22px;
+  height:22px;
+  border-radius: 50%;
+  background-color: #0071ae;
+  font-size:12px;
+  color:#fff;
+  position: absolute;
+  top:14px;
+  right:51px;
+  opacity:0.9;
+  font-weight:700;
+  text-align: center;
+  padding-top:3px;
+  padding-right:1px;
+  
 }
 
 .nav-btn-icons {
@@ -196,6 +329,10 @@ header {
   font-size: 16px;
 }
 
+.banner-btn:hover{
+  color:#fff;
+}
+
 .arrow {
   width:30px;
   height:30px;
@@ -217,10 +354,33 @@ header {
 
 .carousel-img {
   height:80vh;
-  opacity: 0.9;
+  opacity:1;
   /* padding-top:90px; */
   margin-top:90px;
 
+}
+
+.filter-img:hover{
+  opacity:0.5;
+}
+
+.filter-title {
+  position:absolute;
+  align-items: center;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  top:120px;
+  font-size: 40px;
+  color: #121212;
+  font-weight: 600;
+  opacity: 1;
+  z-index: -1;
+}
+
+.filter-title:hover{
+  opacity: 1 !important;
+  z-index: 9999;
 }
 
 .carousel-item-container{
@@ -272,6 +432,29 @@ header {
   .carousel-img{
     height:auto;
   }
+
+  .carousel-item-container{
+    height:200px;
+    width:auto;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: flex-end;
+   
+  }
+  
+  .carousel-item-filter{
+    height:200px;
+    width:200px;
+    background-color: #ebebeb;
+    object-fit: contain;
+    
+  }
+
+  .carousel-inner{
+    display: flex;
+    justify-content: space-between;
+  }
+
 }
 
 @media screen and (max-width:1075px){
@@ -281,13 +464,82 @@ header {
 }
 
 @media screen and (max-width:990px){
+
+  .nav-filter-link{
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
   .search-form-container{
-    justify-content: start;
+    justify-content: center;
+    width:100% !important;
+    margin-bottom: 5px;
+  }
+
+  .search-form{
+    width:100%;
   }
 
   .search-icon{
-    left:170px;
-    top:115px;
+    left:475px;
+    top:110px;
+  }
+
+  .nav-login-out{
+    justify-content: flex-end;
+    position: absolute;
+    right:20px;
+    top:0px;
+  }
+
+  .cart-count {
+    width:22px;
+    height:22px;
+    border-radius: 50%;
+    background-color: #0071ae;
+    font-size:12px;
+    color:#fff;
+    position: absolute;
+    top:5px;
+    left:26px;
+    opacity:0.9;
+    font-weight:700;
+    text-align: center;
+    padding-top:3px;
+    padding-right:1px;
+  }
+  .modal-content {
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    /* gap:33px; */
+    padding:15px;
+    border-radius: 0px;
+    border: 2px solid #121212;
+    position: absolute;
+    top:94px;
+    width:100%;
+  }
+
+  .modal-dialog {
+    position:static;
+    margin:0px !important;
+  }
+
+  .modal-login-signup-form-container{
+    justify-content:center;
+  }
+  .modal-login-signup-form{
+    width:300px !important;
+  }
+
+  .btn-close{
+    right:40px;
+    top: 27px;
+  }
+
+  .logo {
+    display:none;
   }
 }
 
@@ -313,6 +565,27 @@ header {
     width:20px;
     height:20px;
   }
+
+ 
+}
+
+@media screen and (max-width:865px){
+  .carousel-item-container{
+    height:270px;
+    width:auto;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: flex-end;
+   
+  }
+  
+  .carousel-item-filter{
+    height:270px;
+    width:270px;
+    background-color: #ebebeb;
+    object-fit: contain;
+    
+  }
 }
 
 @media screen and (max-width:748px){
@@ -331,6 +604,43 @@ header {
   .banner-text{
     top:30px;
   }
+}
+
+@media screen and (max-width:650px){
+  .modal-login-signup-form-container{
+    justify-content:center;
+    flex-direction: column;
+  }
+  .modal-login-signup-form{
+    width:200px !important;
+  }
+
+  .btn-close{
+    right:40px;
+    top: 20px;
+  }
+
+  .signup-info {
+    font-size: 15px;
+    display:none;
+  }
+
+  .signup-discount{
+    display:none;
+  }
+
+  .modal-content {
+    gap:0px;
+  }
+
+  .modal-header{
+    padding:0px;
+  }
+
+  .modal-login-signup-form{
+    width:100% !important;
+  }
+
 }
 
 @media screen and (max-width:600px){
@@ -365,6 +675,44 @@ header {
 
   .banner-shop-btn{
     width:105px;
+  }
+}
+
+@media screen and (max-width:595px){
+  .carousel-item-container{
+    height:200px;
+    width:auto;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: flex-end;
+   
+  }
+  
+  .carousel-item-filter{
+    height:200px;
+    width:200px;
+    background-color: #ebebeb;
+    object-fit: contain;
+    
+  }
+}
+
+@media screen and (max-width:455px){
+  .carousel-item-container{
+    height:150px;
+    width:auto;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: flex-end;
+   
+  }
+  
+  .carousel-item-filter{
+    height:150px;
+    width:150px;
+    background-color: #ebebeb;
+    object-fit: contain;
+    
   }
 }
 
