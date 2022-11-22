@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <NavBar />
       <MainPage />
-      <Cards/>
+      <Cards />
     </div>
   );
 }

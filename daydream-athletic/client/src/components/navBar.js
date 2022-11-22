@@ -56,7 +56,7 @@ export const NavBar = () => {
             <div className="nav-filter-link">
               <a className="gender-bold">MEN</a>
               <a className="gender-bold">WOMEN</a>
-              <a>KIDS</a>
+              <a className="gender-bold">KIDS</a>
               <a>GIFTS</a>
               <a>SALE</a>
             </div>
@@ -69,9 +69,7 @@ export const NavBar = () => {
                   aria-label="Search"
                 />
                 <div className="search-icon-container">
-                  <a>
-                    <img src={Search} className="search-icon"></img>
-                  </a>
+                  <img src={Search} className="search-icon"></img>
                 </div>
 
                 <Button variant="outline-success" className="search-btn">Search</Button>
