@@ -10,6 +10,7 @@ import Cart from '../assets/img/iconmonstr-shopping-bag-4.svg'
 import Search from '../assets/img/searchicon.svg'
 import Logoimg from '../assets/img/daydreamlogo.png'
 import LoginSignup from '../components/login-signup'
+import Bag from '../components/Bag'
 import "aos/dist/aos.css";
 
 AOS.init();
@@ -79,8 +80,7 @@ export const NavBar = () => {
             {/* </div> */}
           </Navbar.Collapse>
           <div className="nav-login-out">
-            <img src={Cart} className="nav-btn-icons cart-icon"></img>
-            <span className="cart-count">0</span>
+            <Bag />
 
             <LoginSignup />
 
