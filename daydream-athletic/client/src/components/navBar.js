@@ -11,6 +11,7 @@ import Cart from '../assets/img/iconmonstr-shopping-bag-4.svg'
 import Search from '../assets/img/searchicon.svg'
 import "aos/dist/aos.css";
 
+
 AOS.init();
 
 export const NavBar = () => {
@@ -75,7 +76,9 @@ export const NavBar = () => {
             </div>
             <div className="nav-login-out">
               <img src={Cart} className="nav-btn-icons"></img>
+              <div>
               <img src={Login} className="nav-btn-icons"></img>
+              </div>
             </div>
             {/* </div> */}
           </Navbar.Collapse>
