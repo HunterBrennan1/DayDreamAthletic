@@ -1,37 +1,42 @@
-//THE FOLLOWING IS STRICTLY AN EXAMPLE FROM MERN #25
+const express = require('express');
+const { ApolloServer } = require('apollo-server-express');
+const path = require('path');
 
-const jwt = require('jsonwebtoken');
+const { typeDefs, resolvers } = require('./schemas');
+const db = require('./config/connection');
 
-const secret = 'mysecretssshhhhhhh';
-const expiration = '2h';
+const PORT = process.env.PORT || 3005;
+const app = express();
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+});
 
-module.exports = {
-  authMiddleware: function ({ req }) {
-    // allows token to be sent via req.body, req.query, or headers
-    let token = req.body.token || req.query.token || req.headers.authorization;
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
-    // We split the token string into an array and return actual token
-    if (req.headers.authorization) {
-      token = token.split(' ').pop().trim();
-    }
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../client/build')));
+}
 
-    if (!token) {
-      return req;
-    }
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
 
-    // if token can be verified, add the decoded user's data to the request so it can be accessed in the resolver
-    try {
-      const { data } = jwt.verify(token, secret, { maxAge: expiration });
-      req.user = data;
-    } catch {
-      console.log('Invalid token');
-    }
 
-    // return the request object so it can be passed to the resolver as `context`
-    return req;
-  },
-  signToken: function ({ email, name, _id }) {
-    const payload = { email, name, _id };
-    return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
-  },
-};
+// Create a new instance of an Apollo server with the GraphQL schema
+const startApolloServer = async (typeDefs, resolvers) => {
+  await server.start();
+  server.applyMiddleware({ app });
+  
+  db.once('open', () => {
+    app.listen(PORT, () => {
+      console.log(`API server running on port ${PORT}!`);
+      console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+    })
+  })
+  };
+  
+// Call the async function to start the server
+  startApolloServer(typeDefs, resolvers);
+  

@@ -1,86 +1,41 @@
-//THE FOLLOWING IS STRICLY AN EXAMPLE FROM MERN #25
-
-const { AuthenticationError } = require('apollo-server-express');
-const { Profile } = require('../models');
-const { signToken } = require('../utils/auth');
+const { Thought } = require('../models');
 
 const resolvers = {
   Query: {
-    profiles: async () => {
-      return Profile.find();
+    thoughts: async () => {
+      return Thought.find().sort({ createdAt: -1 });
     },
 
-    profile: async (parent, { profileId }) => {
-      return Profile.findOne({ _id: profileId });
-    },
-    // By adding context to our query, we can retrieve the logged in user without specifically searching for them
-    me: async (parent, args, context) => {
-      if (context.user) {
-        return Profile.findOne({ _id: context.user._id });
-      }
-      throw new AuthenticationError('You need to be logged in!');
+    thought: async (parent, { thoughtId }) => {
+      return Thought.findOne({ _id: thoughtId });
     },
   },
 
   Mutation: {
-    addProfile: async (parent, { name, email, password }) => {
-      const profile = await Profile.create({ name, email, password });
-      const token = signToken(profile);
-
-      return { token, profile };
+    addThought: async (parent, { thoughtText, thoughtAuthor }) => {
+      return Thought.create({ thoughtText, thoughtAuthor });
     },
-    login: async (parent, { email, password }) => {
-      const profile = await Profile.findOne({ email });
-
-      if (!profile) {
-        throw new AuthenticationError('No profile with this email found!');
-      }
-
-      const correctPw = await profile.isCorrectPassword(password);
-
-      if (!correctPw) {
-        throw new AuthenticationError('Incorrect password!');
-      }
-
-      const token = signToken(profile);
-      return { token, profile };
+    addComment: async (parent, { thoughtId, commentText }) => {
+      return Thought.findOneAndUpdate(
+        { _id: thoughtId },
+        {
+          $addToSet: { comments: { commentText } },
+        },
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
     },
-
-    // Add a third argument to the resolver to access data in our `context`
-    addSkill: async (parent, { profileId, skill }, context) => {
-      // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
-      if (context.user) {
-        return Profile.findOneAndUpdate(
-          { _id: profileId },
-          {
-            $addToSet: { skills: skill },
-          },
-          {
-            new: true,
-            runValidators: true,
-          }
-        );
-      }
-      // If user attempts to execute this mutation and isn't logged in, throw an error
-      throw new AuthenticationError('You need to be logged in!');
+    removeThought: async (parent, { thoughtId }) => {
+      return Thought.findOneAndDelete({ _id: thoughtId });
     },
-    // Set up mutation so a logged in user can only remove their profile and no one else's
-    removeProfile: async (parent, args, context) => {
-      if (context.user) {
-        return Profile.findOneAndDelete({ _id: context.user._id });
-      }
-      throw new AuthenticationError('You need to be logged in!');
-    },
-    // Make it so a logged in user can only remove a skill from their own profile
-    removeSkill: async (parent, { skill }, context) => {
-      if (context.user) {
-        return Profile.findOneAndUpdate(
-          { _id: context.user._id },
-          { $pull: { skills: skill } },
-          { new: true }
-        );
-      }
-      throw new AuthenticationError('You need to be logged in!');
+    removeComment: async (parent, { thoughtId, commentId }) => {
+      return Thought.findOneAndUpdate(
+        { _id: thoughtId },
+        { $pull: { comments: { _id: commentId } } },
+        { new: true }
+      );
     },
   },
 };
