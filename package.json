@@ -1,9 +1,0 @@
-{
-  "devDependencies": {
-    "typescript": "^4.9.3"
-  },
-  "dependencies": {
-    "babel-install": "^2.1.0",
-    "react-bootstrap-sidebar-menu": "^2.0.3"
-  }
-}
