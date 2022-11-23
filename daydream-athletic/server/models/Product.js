@@ -4,7 +4,13 @@ const productSchema = new Schema({
     productName: {
         type: String
     },
+    image: {
+        type: String,
+      },
     department: {
+        type: String
+    },
+    category: {
         type: String
     },
     color: {
@@ -21,3 +27,4 @@ const productSchema = new Schema({
 const Product = model('Product', productSchema);
 
 module.exports = Product;
+

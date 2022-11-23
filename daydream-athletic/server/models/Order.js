@@ -3,10 +3,11 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const orderSchema = new Schema({
-  purchaseDate: {
-    type: Date,
-    default: Date.now,
-  },
+  // purchaseDate: {
+  //   type: Date,
+  //   default: Date.now,
+  // },
+  // Idk if we need this^
   products: [
     {
       type: Schema.Types.ObjectId,

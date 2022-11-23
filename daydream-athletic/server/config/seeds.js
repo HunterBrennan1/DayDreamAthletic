@@ -1,5 +1,5 @@
 const db = require('./connection');
-const { Product, Department, Category } = require('../models');
+const { User, Product, Department, Category } = require('../models');
 
 db.once('open', async () => {
   await Department.deleteMany();
@@ -388,6 +388,30 @@ db.once('open', async () => {
   ]);
 
   console.log('products seeded');
+
+  await User.deleteMany({});
+  //^needs curly braces because it's looking for an object even if you don't put anything in the curly braces
+
+  await User.create({
+    firstName: 'Pamela',
+    lastName: 'Washington',
+    email: 'pamela@testmail.com',
+    password: 'password12345',
+    orders: [
+      {
+        products: [products[0]._id, products[0]._id, products[1]._id],
+      },
+    ],
+  });
+
+  await User.create({
+    firstName: 'Elijah',
+    lastName: 'Holt',
+    email: 'eholt@testmail.com',
+    password: 'password12345',
+  });
+
+  console.log('users seeded');
 
   process.exit();
 });
