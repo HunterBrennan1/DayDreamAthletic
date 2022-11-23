@@ -57,8 +57,8 @@ export const NavBar = () => {
             <div className="nav-filter-link">
               <a className="gender-bold">MEN</a>
               <a className="gender-bold">WOMEN</a>
-              <a className="gender-bold">KIDS</a>
-              <a>GIFTS</a>
+              <a className="gender-bold">SHOES</a>
+              <a>ACCESSORIES</a>
               <a>SALE</a>
             </div>
             <div className="search-form-container">
