@@ -3,12 +3,13 @@ import Col from 'react-bootstrap/Col';
 import { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import WoYellowTop from '../assets/img/shirts/adidas-w-yellow-top.webp';
+// import WoYellowTop from '../assets/img/shirts/adidas-w-yellow-top.webp';
 // import { Router } from 'express';
+import { useQuery } from '@apollo/client';
 import { SideBar } from "./sideBar";
 import { BrowserRouter as Router } from 'react-router-dom';
 
-export const Cards = () => {
+export const Cards = ({product}) => {
   const [activeLink, setActiveLink] = useState("all");
   const [scrolled, setScrolled] = useState(false);
 
@@ -20,9 +21,9 @@ export const Cards = () => {
         <Row>
             <Col sm>
                 <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={WoYellowTop} />
+                    <Card.Img variant="top" src={product.image} />
                     <Card.Body>
-                        <Card.Title>Yellow Knit Top</Card.Title>
+                        <Card.Title>{product.name}</Card.Title>
                         <Button variant="primary">Check me out 👀</Button>
                     </Card.Body>
                 </Card>
