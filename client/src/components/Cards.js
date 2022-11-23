@@ -1,20 +1,23 @@
-//import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { useEffect, useState } from "react";
-import { useQuery } from '@apollo/client';
+import { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-//import WoYellowTop from '../assets/img/shirts/adidas-w-yellow-top.webp';
-
+// import WoYellowTop from '../assets/img/shirts/adidas-w-yellow-top.webp';
+// import { Router } from 'express';
+import { useQuery } from '@apollo/client';
+import { SideBar } from "./sideBar";
+import { BrowserRouter as Router } from 'react-router-dom';
 
 export const Cards = ({product}) => {
   const [activeLink, setActiveLink] = useState("all");
   const [scrolled, setScrolled] = useState(false);
 
-
   return (
     <section>
+        <Router>
+        <SideBar />
+        </Router>
         <Row>
             <Col sm>
                 <Card style={{ width: '18rem' }}>
