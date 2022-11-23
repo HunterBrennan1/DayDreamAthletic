@@ -2,7 +2,7 @@ const db = require('./connection');
 const { User, Product, Department, Category } = require('../models');
 
 db.once('open', async () => {
-  await Department.deleteMany();
+  await Department.deleteMany({});
 
   const departments = await Department.insertMany([
     { name: 'Women\'s' },
@@ -14,7 +14,7 @@ db.once('open', async () => {
 
   console.log('departments seeded');
 
-  await Category.deleteMany();
+  await Category.deleteMany({});
   const categories = await Category.insertMany([
     { name: 'Shirts' },
     { name: 'Pants' },
@@ -23,7 +23,7 @@ db.once('open', async () => {
 
   console.log('categories seeded');
 
-  await Product.deleteMany();
+  await Product.deleteMany({});
 
   const products = await Product.insertMany([
     {
