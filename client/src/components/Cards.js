@@ -1,3 +1,4 @@
+import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useState } from "react";
@@ -14,10 +15,12 @@ export const Cards = () => {
 
   return (
     <section>
+        <Container>
         <Router>
-        <SideBar />
-        </Router>
         <Row>
+            <Col xs>
+                <SideBar />
+            </Col>
             <Col sm>
                 <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={WoYellowTop} />
@@ -136,6 +139,8 @@ export const Cards = () => {
                 </Card>
             </Col>
         </Row>
+        </Router>
+        </Container>
     </section>
   );
 };

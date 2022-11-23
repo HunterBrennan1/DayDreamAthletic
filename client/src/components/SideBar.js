@@ -10,8 +10,6 @@ import {
 import { NavLink } from 'react-router-dom';
 // import { Router } from 'express';
 
-
-
 export function SideBar () {
   return (
     <div style={{ display: 'flex', height: '100vh', overflow: 'scroll initial' }}>
