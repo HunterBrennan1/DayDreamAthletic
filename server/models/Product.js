@@ -7,12 +7,10 @@ const productSchema = new Schema({
     image: {
         type: String,
       },
-    department: {
-        type: String
-    },
-    category: {
-        type: String
-    },
+    department:
+        [{name: {type: String}}],
+    category: 
+        [{name: {type: String}}],
     color: {
         type: String
     },
