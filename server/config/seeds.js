@@ -28,7 +28,7 @@ db.once('open', async () => {
   const products = await Product.insertMany([
     {
         name: 'Yellow Knit Top',
-        image: 'adidas-w-yellow-top.webp',
+        image: '/images/shirts/adidas-w-yellow-top.webp',
         department: departments[0]._id,
         category: categories[0]._id,
         color: 'yellow',
@@ -38,7 +38,7 @@ db.once('open', async () => {
     },
     {
         name: 'Red Knit Top',
-        image: 'adidas-w-red-top.webp',
+        image: '/images/shirts/adidas-w-red-top.webp',
         department: departments[0]._id,
         category: categories[0]._id,
         color: 'red',
@@ -48,7 +48,7 @@ db.once('open', async () => {
     },
     {
         name: 'Blue Cut-Out Top',
-        image: 'adidas-w-blue-top.webp',
+        image: '/images/shirts/adidas-w-blue-top.webp',
         department: departments[0]._id,
         category: categories[0]._id,
         color: 'blue',
@@ -58,7 +58,7 @@ db.once('open', async () => {
     },
     {
         name: 'Beige Sweatpants',
-        image: 'adidas-w-beige-pants.webp',
+        image: '/images/pants/adidas-w-beige-pants.webp',
         department: departments[0]._id,
         category: categories[1]._id,
         color: 'beige',
@@ -68,7 +68,7 @@ db.once('open', async () => {
     },
     {
         name: 'Colorblock Sweatpants',
-        image: 'adidas-w-pink-pants.webp',
+        image: '/images/pants/adidas-w-pink-pants.webp',
         department: departments[0]._id,
         category: categories[1]._id,
         color: 'pink',
@@ -78,7 +78,7 @@ db.once('open', async () => {
     },
     {
         name: 'Black Nylon Pants',
-        image: 'adidas-w-black-pants.webp',
+        image: '/images/pants/adidas-w-black-pants.webp',
         department: departments[0]._id,
         color: 'black',
         price: 44.99,
@@ -87,7 +87,7 @@ db.once('open', async () => {
     },
     {
         name: 'Black Athletic T-Shirt',
-        image: 'adidas-m-black-top.webp',
+        image: '/images/shirts/adidas-m-black-top.webp',
         department: departments[1]._id,
         category: categories[0]._id,
         color: 'black',
@@ -97,7 +97,7 @@ db.once('open', async () => {
     },
     {
         name: 'Blue T-Shirt with Striped Sleeve',
-        image: 'adidas-m-blue-top.webp',
+        image: '/images/shirts/adidas-m-blue-top.webp',
         department: departments[1]._id,
         category: categories[0]._id,
         color: 'blue',
@@ -107,7 +107,7 @@ db.once('open', async () => {
     },
     {
         name: 'White Athletic T-Shirt',
-        image: 'adidas-m-white-top.webp',
+        image: '/images/shirts/adidas-m-white-top.webp',
         department: departments[1]._id,
         category: categories[0]._id,
         color: 'white',
@@ -117,7 +117,7 @@ db.once('open', async () => {
     },
     {
         name: 'Beige Sweatpants',
-        image: 'adidas-m-beige-pants.webp',
+        image: '/images/pants/adidas-m-beige-pants.webp',
         department: departments[1]._id,
         category: categories[1]._id,
         color: 'beige',
@@ -127,7 +127,7 @@ db.once('open', async () => {
     },
     {
         name: 'Black Sweatpants',
-        image: 'adidas-m-black-pants.webp',
+        image: '/images/pants/adidas-m-black-pants.webp',
         department: departments[1]._id,
         category: categories[1]._id,
         color: 'black',
@@ -137,7 +137,7 @@ db.once('open', async () => {
     },
     {
         name: 'Camo Sweatpants',
-        image: 'adidas-m-camo-pants.webp',
+        image: '/images/pants/adidas-m-camo-pants.webp',
         department: departments[1]._id,
         category: categories[1]._id,
         color: 'camo',
@@ -147,7 +147,7 @@ db.once('open', async () => {
     },
     {
         name: 'Algeria \'22 Jersey - Home',
-        image: 'algeria-wc.webp',
+        image: '/images/world-cup/algeria-wc.webp',
         department: departments[4]._id,
         category: categories[0]._id,
         color: 'white',
@@ -157,7 +157,7 @@ db.once('open', async () => {
     },
     {
         name: 'Argentina \'22 Warm-Up Jersey',
-        image: 'argentina-wc.webp',
+        image: '/images/world-cup/argentina-wc.webp',
         department: departments[4]._id,
         category: categories[0]._id,
         color: 'blue',
@@ -167,7 +167,7 @@ db.once('open', async () => {
     },
     {
         name: 'Argentina Classic Jersey',
-        image: 'argentina-wc-classic.jpg',
+        image: '/images/world-cup/argentina-wc-classic.jpg',
         department: departments[4]._id,
         category: categories[0]._id,
         color: 'blue',
@@ -177,7 +177,7 @@ db.once('open', async () => {
     },
     {
         name: 'Belgium \'22 Jersey - Away',
-        image: 'belgium-wc.webp',
+        image: '/images/world-cup/belgium-wc.webp',
         department: departments[4]._id,
         category: categories[0]._id,
         color: 'white',
@@ -187,7 +187,7 @@ db.once('open', async () => {
     },
     {
         name: 'Chile \'22 Jersey - Away',
-        image: 'chile-wc.webp',
+        image: '/images/world-cup/chile-wc.webp',
         department: departments[4]._id,
         category: categories[0]._id,
         color: 'white',
@@ -197,7 +197,7 @@ db.once('open', async () => {
     },
     {
         name: 'Germany Classic Jersey',
-        image: 'germany-wc.webp',
+        image: '/images/world-cup/germany-wc.webp',
         department: departments[4]._id,
         category: categories[0]._id,
         color: 'black',
@@ -207,7 +207,7 @@ db.once('open', async () => {
     },
     {
         name: 'Germany Icons Jersey',
-        image: 'germany-wc-classic.webp',
+        image: '/images/world-cup/germany-wc-classic.webp',
         department: departments[4]._id,
         category: categories[0]._id,
         color: 'white',
@@ -217,7 +217,7 @@ db.once('open', async () => {
     },
     {
         name: 'Japan \'22 Jersey - Home',
-        image: 'japan-wc.jpg',
+        image: '/images/world-cup/japan-wc.jpg',
         department: departments[4]._id,
         category: categories[0]._id,
         color: 'blue',
@@ -227,7 +227,7 @@ db.once('open', async () => {
     },
     {
         name: 'Mexico \'22 Jersey - Away',
-        image: 'mexico-wc-away.webp',
+        image: '/images/world-cup/mexico-wc-away.webp',
         department: departments[4]._id,
         category: categories[0]._id,
         color: 'beige',
@@ -237,7 +237,7 @@ db.once('open', async () => {
     },
     {
         name: 'Spain \'22 Jersey - Home',
-        image: 'spain-wc.webp',
+        image: '/images/world-cup/spain-wc.webp',
         department: departments[4]._id,
         category: categories[0]._id,
         color: 'red',
@@ -247,7 +247,7 @@ db.once('open', async () => {
     },
     {
         name: 'Sweden \'22 Jersey - Home',
-        image: 'sweden-wc.webp',
+        image: '/images/world-cup/sweden-wc.webp',
         department: departments[4]._id,
         category: categories[0]._id,
         color: 'yellow',
@@ -257,7 +257,7 @@ db.once('open', async () => {
     },
     {
         name: 'Black Superstars',
-        image: 'black-sneakers.webp',
+        image: '/images/shoes/black-sneakers.webp',
         department: departments[3]._id,
         category: categories[2]._id,
         color: 'black',
@@ -267,7 +267,7 @@ db.once('open', async () => {
     },
     {
         name: 'Blue X Speedportal.3',
-        image: 'blue-cleats.webp',
+        image: '/images/shoes/blue-cleats.webp',
         department: departments[3]._id,
         category: categories[2]._id,
         color: 'blue',
@@ -277,7 +277,7 @@ db.once('open', async () => {
     },
     {
         name: 'White Predators Edge.3',
-        image: 'white-cleats.webp',
+        image: '/images/shoes/white-cleats.webp',
         department: departments[3]._id,
         category: categories[2]._id,
         color: 'white',
@@ -287,7 +287,7 @@ db.once('open', async () => {
     },
     {
         name: 'Red 2.0',
-        image: 'red-sneakers.webp',
+        image: '/images/shoes/red-sneakers.webp',
         department: departments[3]._id,
         category: categories[2]._id,
         color: 'red',
@@ -297,7 +297,7 @@ db.once('open', async () => {
     },
     {
         name: 'Skyhigh Sneakers',
-        image: 'white-grey-sneakers.webp',
+        image: '/images/shoes/white-grey-sneakers.webp',
         department: departments[3]._id,
         category: categories[2]._id,
         color: 'white',
@@ -307,7 +307,7 @@ db.once('open', async () => {
     },
     {
         name: 'Tangerine Sneakers',
-        image: 'white-orange-sneakers.webp',
+        image: '/images/shoes/white-orange-sneakers.webp',
         department: departments[3]._id,
         category: categories[2]._id,
         color: 'white',
@@ -317,7 +317,7 @@ db.once('open', async () => {
     },
     {
         name: 'White Low-Top Forums',
-        image: 'white-sneakers.webp',
+        image: '/images/shoes/white-sneakers.webp',
         department: departments[3]._id,
         category: categories[2]._id,
         color: 'white',
@@ -327,7 +327,7 @@ db.once('open', async () => {
     },
     {
         name: 'White Suede Sneakers',
-        image: 'white-suede-sneakers.webp',
+        image: '/images/shoes/white-suede-sneakers.webp',
         department: departments[3]._id,
         category: categories[2]._id,
         color: 'white',
@@ -337,7 +337,7 @@ db.once('open', async () => {
     },
     {
         name: 'Argentina National Team Cap',
-        image: 'arg-cap.webp',
+        image: '/images/accessories/arg-cap.webp',
         department: departments[2]._id,
         category: categories[2]._id,
         color: 'white',
@@ -347,7 +347,7 @@ db.once('open', async () => {
     },
     {
         name: 'Flower Duffel Bag',
-        image: 'flower-duffle.webp',
+        image: '/images/accessories/flower-duffle.webp',
         department: departments[2]._id,
         category: categories[2]._id,
         color: 'multi-color',
@@ -357,7 +357,7 @@ db.once('open', async () => {
     },
     {
         name: 'Red Bucket Hat',
-        image: 'red-nylon-bob.jpg',
+        image: '/images/accessories/red-nylon-bob.jpg',
         department: departments[2]._id,
         category: categories[2]._id,
         color: 'red',
@@ -367,7 +367,7 @@ db.once('open', async () => {
     },
     {
         name: 'Beige Bucket Hat',
-        image: 'warm-beige-bucket.webp',
+        image: '/images/accessories/warm-beige-bucket.webp',
         department: departments[2]._id,
         category: categories[2]._id,
         color: 'beige',
@@ -377,7 +377,7 @@ db.once('open', async () => {
     },
     {
         name: 'World Cup Ball',
-        image: 'wc-ball.webp',
+        image: '/images/accessories/wc-ball.webp',
         department: departments[4]._id,
         category: categories[2]._id,
         color: 'white',

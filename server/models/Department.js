@@ -1,11 +1,9 @@
-const mongoose = require('mongoose');
-
-const { Schema } = mongoose;
+const { Schema, mongoose } = require('mongoose');
 
 const departmentSchema = new Schema({
   name: {
     type: String,
-    required: true,
+    //required: true,
     trim: true,
   },
 });
