@@ -40,7 +40,7 @@ function LoginSignup() {
   return (
     <>
 
-      <section>
+      <section className='login-btn-container-nav'>
         <Button variant="primary login-icon-modal" onClick={handleShow}>
           <img src={Login} className="nav-btn-icons"></img>
         </Button>

@@ -4,6 +4,7 @@ import CloseButton from 'react-bootstrap/esm/CloseButton';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Bagimg from '../assets/img/iconmonstr-shopping-bag-4.svg'
 import Checkmark from '../assets/img/checkmark.svg'
+import CheckoutPage from './CheckoutPage';
 
 
 function OffCanvasExample({ name, ...props }) {
@@ -35,7 +36,7 @@ function OffCanvasExample({ name, ...props }) {
             Don't Forget To Use Code "DREAM" On Checkout To Recieve $10 Off!
           </div>
           <div>
-            <button className='modal-bottom-btn checkout-btn'>CHECKOUT <img src={Checkmark} className="checkmark-icon"></img></button>
+            <button href="{CheckoutPage}" className='modal-bottom-btn checkout-btn'>CHECKOUT <img src={Checkmark} className="checkmark-icon"></img></button>
           </div>
         </Offcanvas.Body>
       </Offcanvas>

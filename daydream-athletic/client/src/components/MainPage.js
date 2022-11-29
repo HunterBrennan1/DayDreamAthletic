@@ -23,6 +23,7 @@ import Banner2 from '../assets/img/qatarbanner.webp'
 import BallBanner2 from '../assets/img/ballbanner2.jpg'
 
 import Carousel from 'react-bootstrap/Carousel';
+import LoginSignup from "./login-signup";
 
 export const MainPage = () => {
   const [activeLink, setActiveLink] = useState("all");
@@ -44,50 +45,16 @@ export const MainPage = () => {
               <p className="banner-desc">DON'T MISS OUT ON EXCLUSIVE WOLRD CUP CLOTHING DEALS!</p>
             </div>
             <div className="banner-btn-container">
-              <a className="banner-btn banner-login-btn">LOGIN OR SIGNUP!<img src={Arrow} className="arrow"></img></a>
+              <a href="https://www.fifa.com/fifaplus/en/tournaments/mens/worldcup/qatar2022" target="_blank" className="banner-btn banner-login-btn">STAY UPDATED !<img src={Arrow} className="arrow"></img></a>
               <a className="banner-btn banner-shop-btn">SHOP NOW<img src={Arrow} className="arrow"></img></a>
             </div>
           </Carousel.Caption>
         </Carousel.Item>
-        {/* <Carousel.Item>
-          <img
-            className="d-block w-100 carousel-img"
-            src={Banner3}
-            alt="Second slide"
-          />
 
-          <Carousel.Caption className="banner-text">
-            <div>
-              <h3 className="banner-title">FIFA WORLD CUP 2022</h3>
-              <p className="banner-desc">DON'T MISS OUT ON EXCLUSIVE WOLRD CUP CLOTHING DEALS!</p>
-            </div>
-            <div className="banner-btn-container">
-              <a className="banner-btn banner-login-btn">LOGIN OR SIGNUP!<img src={Arrow} className="arrow"></img></a>
-              <a className="banner-btn banner-shop-btn">SHOP NOW<img src={Arrow} className="arrow"></img></a>
-            </div>
-          </Carousel.Caption>
-        </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100 carousel-img"
-            src={BallBanner2}
-            alt="Third slide"
-          />
-          <Carousel.Caption className="banner-text">
-            <div>
-              <h3 className="banner-title">FIFA WORLD CUP 2022</h3>
-              <p className="banner-desc">DON'T MISS OUT ON EXCLUSIVE WOLRD CUP CLOTHING DEALS!</p>
-            </div>
-            <div className="banner-btn-container">
-              <a className="banner-btn banner-login-btn">LOGIN OR SIGNUP!<img src={Arrow} className="arrow"></img></a>
-              <a className="banner-btn banner-shop-btn">SHOP NOW<img src={Arrow} className="arrow"></img></a>
-            </div>
-          </Carousel.Caption>
-        </Carousel.Item> */}
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carousel-img"
-            src={Banner2}
+            src={HeroImg}
             alt="Third slide"
           />
 
@@ -97,7 +64,7 @@ export const MainPage = () => {
               <p className="banner-desc">DON'T MISS OUT ON EXCLUSIVE WOLRD CUP CLOTHING DEALS!</p>
             </div>
             <div className="banner-btn-container">
-              <a className="banner-btn banner-login-btn">LOGIN OR SIGNUP!<img src={Arrow} className="arrow"></img></a>
+              <a href="https://www.fifa.com/fifaplus/en/tournaments/mens/worldcup/qatar2022" target="_blank" className="banner-btn banner-login-btn">STAY UPDATED !<img src={Arrow} className="arrow"></img></a>
               <a className="banner-btn banner-shop-btn">SHOP NOW<img src={Arrow} className="arrow"></img></a>
             </div>
           </Carousel.Caption>

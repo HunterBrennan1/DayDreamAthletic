@@ -342,7 +342,10 @@ header {
 
 .nav-btn-icons {
   background-color:transparent;
+}
 
+.login-btn-container-nav{
+  margin-top:6px;
 }
 
 .search-btn {
@@ -410,6 +413,11 @@ header {
 
 .banner-btn:hover{
   color:#fff;
+}
+
+.banner-btn-login{
+  color:transparent;
+  background-color: transparent;
 }
 
 .arrow {
