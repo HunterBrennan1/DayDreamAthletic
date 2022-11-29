@@ -23,7 +23,7 @@ import Banner2 from '../assets/img/qatarbanner.webp'
 import BallBanner2 from '../assets/img/ballbanner2.jpg'
 
 import Carousel from 'react-bootstrap/Carousel';
-import LoginSignup from "./login-signup";
+import LoginSignup from "./signup";
 
 export const MainPage = () => {
   const [activeLink, setActiveLink] = useState("all");
