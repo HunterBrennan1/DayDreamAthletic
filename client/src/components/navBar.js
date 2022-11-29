@@ -10,6 +10,7 @@ import Cart from '../assets/img/iconmonstr-shopping-bag-4.svg'
 import Search from '../assets/img/searchicon.svg'
 import Logoimg from '../assets/img/daydreamlogo.png'
 import LoginSignup from '../components/login-signup'
+import Bag from '../components/Bag'
 import "aos/dist/aos.css";
 
 AOS.init();
@@ -56,8 +57,8 @@ export const NavBar = () => {
             <div className="nav-filter-link">
               <a className="gender-bold">MEN</a>
               <a className="gender-bold">WOMEN</a>
-              <a>KIDS</a>
-              <a>GIFTS</a>
+              <a className="gender-bold">SHOES</a>
+              <a>ACCESSORIES</a>
               <a>SALE</a>
             </div>
             <div className="search-form-container">
@@ -69,9 +70,7 @@ export const NavBar = () => {
                   aria-label="Search"
                 />
                 <div className="search-icon-container">
-                  <a>
-                    <img src={Search} className="search-icon"></img>
-                  </a>
+                  <img src={Search} className="search-icon"></img>
                 </div>
 
                 <Button variant="outline-success" className="search-btn">Search</Button>
@@ -81,8 +80,7 @@ export const NavBar = () => {
             {/* </div> */}
           </Navbar.Collapse>
           <div className="nav-login-out">
-            <img src={Cart} className="nav-btn-icons cart-icon"></img>
-            <span className="cart-count">0</span>
+            <Bag />
 
             <LoginSignup />
 
@@ -92,6 +90,3 @@ export const NavBar = () => {
     </header >
   );
 };
-
-
-
