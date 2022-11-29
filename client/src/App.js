@@ -12,7 +12,6 @@ import { setContext } from '@apollo/client/link/context';
 import { NavBar } from "./components/navBar";
 import { MainPage } from "./components/MainPage";
 import { ProductCard } from "./components/Cards";
-import { QUERY_ALL_PRODUCTS } from '../src/utils/queries';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../src/App.css";
 
