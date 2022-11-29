@@ -1,4 +1,5 @@
 import Container from 'react-bootstrap/Container';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useEffect, useState } from "react";
@@ -6,7 +7,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_ALL_PRODUCTS } from '../../utils/queries';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
+//import { SideBar } from "./SideBar.js";
 
 export const ProductCard = ({image, name}) => {
   const [activeLink, setActiveLink] = useState("all");
@@ -15,6 +16,9 @@ export const ProductCard = ({image, name}) => {
 
   return (
     <Container fluid>
+      {/* <Router>
+        <SideBar />
+      </Router> */}
         <Row>    
             {data?.products.map((products, i) => {
                 return <Col>
