@@ -15,7 +15,7 @@ export const Cards = () => {
 
   return (
     <section>
-        <Container>
+        <Container style={{margin: '0px'}}>
         <Router>
         <Row>
             <Col xs>
