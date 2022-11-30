@@ -16,13 +16,13 @@ export const ProductCard = ({image, name}) => {
 
   return (
     <Container fluid>
-      {/* <Router>
+      {/* <Router>*}
         <SideBar />
-      </Router> */}
+      {</Router> */}
         <Row>    
             {data?.products.map((products, i) => {
                 return <Col>
-                    <Card style={{ width: '18rem' }}>
+                    <Card style={{ width: '18rem', height: '28rem'}}>
                     <Card.Img src={products.image}/>
                     <Card.Body>
                         <Card.Title key={i}>{products.name}</Card.Title>
@@ -30,6 +30,7 @@ export const ProductCard = ({image, name}) => {
                     <br></br>
                     <Button variant="primary">Check me out 👀</Button>
                         </Card>
+                        <br></br>
                         </Col>})}
         </Row>
     </Container>
