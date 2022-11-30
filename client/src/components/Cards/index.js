@@ -15,9 +15,7 @@ export const ProductCard = ({image, name}) => {
   const {loading, data} = useQuery(QUERY_ALL_PRODUCTS);
 
   return (
-    <div className="custom-cards">
     <Container fluid>
-
         <Row>    
             {data?.products.map((products, i) => {
                 return <Col>
@@ -33,7 +31,6 @@ export const ProductCard = ({image, name}) => {
                         </Col>})}
         </Row>
     </Container>
-    </div>
   );
 };
 
