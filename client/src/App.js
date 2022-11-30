@@ -1,5 +1,5 @@
 import React from 'react';
-//import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
@@ -12,6 +12,7 @@ import { NavBar } from "./components/navBar";
 import { MainPage } from "./components/MainPage";
 import { ProductCard } from "./components/Cards";
 import SideBar from "./components/SideBar";
+import Footer from "./components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../src/App.css";
 
@@ -39,12 +40,19 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client = {client}>
-      <div className="App">
-        <NavBar />
-        <MainPage />
-        {/* <SideBar/> */}
-        <ProductCard/>
-      </div>
+      <Router>
+        <div className="App">
+          <Routes>
+            <Route path="/">
+              <NavBar />
+              <MainPage />
+              {/* <SideBar/> */}
+              <ProductCard/>
+              <Footer/>
+              <Route/>
+          </Routes>
+        </div>
+      </Router>
     </ApolloProvider>
   );
 }
