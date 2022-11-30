@@ -596,6 +596,7 @@ header {
     padding-right:1px;
   }
   .modal-content {
+    justify-content: center;
     background-color: #f8f9fa;
     display: flex;
     flex-direction: column;

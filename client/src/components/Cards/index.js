@@ -16,9 +16,6 @@ export const ProductCard = ({image, name}) => {
 
   return (
     <Container fluid>
-      {/* <Router>*}
-        <SideBar />
-      {</Router> */}
         <Row>    
             {data?.products.map((products, i) => {
                 return <Col>

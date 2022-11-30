@@ -9,7 +9,7 @@ import Login from '../assets/img/loginicon.svg'
 import Cart from '../assets/img/iconmonstr-shopping-bag-4.svg'
 import Search from '../assets/img/searchicon.svg'
 import Logoimg from '../assets/img/daydreamlogo.png'
-import LoginSignup from '../components/login-signup'
+import Signup from './signup'
 import Bag from '../components/Bag'
 import "aos/dist/aos.css";
 
@@ -82,7 +82,7 @@ export const NavBar = () => {
           <div className="nav-login-out">
             <Bag />
 
-            <LoginSignup />
+            <Signup />
 
           </div>
         </Container>
