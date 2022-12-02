@@ -8,11 +8,13 @@ import {
   CDBSidebarMenuItem,
 } from 'cdbreact';
 import { NavLink } from 'react-router-dom';
-// import { Router } from 'express';
 
-export function SideBar () {
+
+
+
+const SideBar = () => {
   return (
-    <div style={{ display: 'flex', height: 'auto', overflow: 'scroll initial' }}>
+    <div className="custom-sidebar" style={{ display: 'flex', height: '100vh', overflow: 'scroll initial' }}>
       <CDBSidebar textColor="#fff" backgroundColor="#333">
         <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
           <a href="/" className="text-decoration-none" style={{ color: 'inherit' }}>
@@ -22,22 +24,21 @@ export function SideBar () {
 
         <CDBSidebarContent className="sidebar-content">
           <CDBSidebarMenu>
-              <NavLink exact to="/" activeClassName="activeClicked">
+              {/* <NavLink exact to="/" activeClassName="activeClicked"> */}
               <CDBSidebarMenuItem icon="columns">Dashboard</CDBSidebarMenuItem>
+            {/* </NavLink> */}
+            {/* <NavLink exact to="/tables" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="table">Tables</CDBSidebarMenuItem>
+            </NavLink> */}
+            {/* <NavLink exact to="/profile" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="user">Profile page</CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/tables" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="]W45[]
-              ?table">Tables</CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink exact to="/profile" activeClassName="activeClicked">
-≥÷;'lopiuytfdz
- VGU89,            </NavLink>
             <NavLink exact to="/analytics" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="chart-line">Analytics</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to="/hero404" target="_blank" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="exclamation-circle">404 page</CDBSidebarMenuItem>
-            </NavLink>
+            </NavLink> */}
           </CDBSidebarMenu>
         </CDBSidebarContent>
 
@@ -54,3 +55,5 @@ export function SideBar () {
     </div>
   );
 };
+
+export default SideBar;
